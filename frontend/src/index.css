@@ -1,6 +1,5 @@
-:root {
-  --primary-bg-color: #5603AD;
-  --red-box: #FF4646;
-  --blue-box: #28B0FF;
-  --yellow-box: #FF9900;
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
