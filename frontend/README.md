@@ -1,0 +1,1 @@
+Vigilanty - Residents of the neighbourhood or a society can track suspicious activities or incidents in their area. Including features like authentication, incident reporting, real time notification and also adding features like poll and surveys for the members to improve their neighborhoods security, safety and decision making.
