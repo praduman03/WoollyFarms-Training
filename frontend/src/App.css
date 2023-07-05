@@ -95,7 +95,7 @@
 /*LOGIN PAGE AND SIGNUP PAGE CSS*/
  
 
-.Login-Page {
+.Login-page {
   /* background: whitesmoke; */
   background-image: url('./assets/loginbg.jpg');
   background-size: cover;
@@ -107,31 +107,31 @@
   align-items: center;
 }
 
-.Login-Page h1{
+.Login-page h1{
   font-weight: bold;
   margin: 0;
 }
 
-.Login-Page h2{
+.Login-page h2{
   text-align: center;
 }
 
-.Login-Page p{
+.Login-page p{
   font-size: 2vh;
 }
 
-.Login-Page span{
+.Login-page span{
   font-size: 1.5vh;
 }
 
-.Login-Page a{
+.Login-page a{
   color: #333;
 font-size: 2vh;
 text-decoration: none;
 margin: 2vh 0;
 }
 
-.Login-Page button {
+.Login-page button {
 border-radius: 20px;
 border: 1px solid white;
 background-color: #5603AD;
@@ -144,7 +144,7 @@ text-transform: uppercase;
   margin-top: 8px;
 }
 
-.Login-Page input {
+.Login-page input {
 background-color: #eee;
 border: none;
 padding: 12px 15px;

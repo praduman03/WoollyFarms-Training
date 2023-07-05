@@ -3,7 +3,7 @@ import "../App.css"
 
 function Login() {
   return (
-    <div className='Login-Page'>
+    <div className='Login-page'>
         <div className="Login-container">
             <div className='Login-form'>
                 <h1>Create Account</h1>
