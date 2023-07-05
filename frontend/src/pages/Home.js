@@ -1,10 +1,12 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
-import Alert from '../components/Alert Part/Alert'
+import Alert from '../components/Features Part/Alert'
 import HeroBg from '../assets/Hero-bg.png'
 import LeftImg from '../assets/Left Image.png'
 import RightImg from '../assets/Right Image.png'
 import { BsArrowRight } from "react-icons/bs"
+import Events from '../components/Features Part/Events'
+import Watch from '../components/Features Part/Watch'
 
 const Home = () => {
   return (
@@ -23,6 +25,10 @@ const Home = () => {
           </div>
         </div>
         <Alert />
+        <hr className='left-hr' />
+        <Events />
+        <hr className='right-hr' />
+        <Watch />
     </div>
   )
 }
