@@ -91,3 +91,119 @@
   width: 30%;
   font-weight: 500;
 }
+
+/*LOGIN PAGE AND SIGNUP PAGE CSS*/
+ 
+
+.Login-page {
+  /* background: whitesmoke; */
+  background-image: url('./assets/loginbg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: 100vh;
+  margin-inline: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.Login-page h1{
+  font-weight: bold;
+  margin: 0;
+}
+
+.Login-page h2{
+  text-align: center;
+}
+
+.Login-page p{
+  font-size: 2vh;
+}
+
+.Login-page span{
+  font-size: 1.5vh;
+}
+
+.Login-page a{
+  color: #333;
+font-size: 2vh;
+text-decoration: none;
+margin: 2vh 0;
+}
+
+.Login-page button {
+border-radius: 20px;
+border: 1px solid white;
+background-color: #5603AD;
+color: #FFFFFF;
+font-size: 12px;
+font-weight: bold;
+padding: 12px 45px;
+letter-spacing: 1px;
+text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.Login-page input {
+background-color: #eee;
+border: none;
+padding: 12px 15px;
+margin: 8px 0;
+width: 100%;
+}
+
+.Login-container {
+background-color: transparent;
+border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
+  display: flex;
+  flex-wrap: wrap;
+  height: 60vh;
+  width: 100vh;
+}
+
+.Login-form {
+background-color: #FFFFFF;
+display: flex;
+flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+padding: 0 50px;
+height: 100%;
+  width: 50vh;
+text-align: center;
+}
+
+.above {
+/* background: #5603AD; */
+  background-color: rgba(86, 3, 173, 0.85);
+  backdrop-filter: blur(3px); 
+color: #FFFFFF;
+  width: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 0 10px 10px 0;
+}
+.above p{
+  margin: 3vh;
+}
+
+.google {
+margin: 20px 0;
+}
+
+.google a {
+border: 1px solid #DDDDDD;
+border-radius: 50%;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+margin: 0 5px;
+height: 40px;
+width: 40px;
+}
