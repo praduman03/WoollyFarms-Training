@@ -7,6 +7,10 @@
   font-family: 'Kanit', sans-serif;
 }
 
+.flex {
+  display: flex;
+}
+
 .justify-center {
   display: flex;
   justify-content: center;
@@ -21,4 +25,69 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Home Page */
+.hero-part {
+  height: 50vh;
+  background-color: var(--primary-bg-color);
+  position: relative;
+  z-index: -1;
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: soft-light;
+  position: absolute;
+  z-index: 0;
+}
+
+.hero-part>div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.hero-part>div img {
+  mix-blend-mode: luminosity;
+  scale: 1.1;
+}
+
+.LeftImg {
+  position: relative;
+  bottom: -8rem;
+}
+
+.hero-text {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+}
+
+.hero-text h3 {
+  font-size: 2rem;
+}
+
+.hero-text button {
+  font-size: 1.5rem;
+  padding: 7px 35px;
+  border-radius: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  font-weight: 500;
 }
