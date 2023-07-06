@@ -1,29 +1,44 @@
-import React from 'react'
-import "../App.css"
+import React from "react";
+import "../App.css";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
-    <div className='Login-page'>
-        <div className="Login-container">
-            <div className='Login-form'>
-                <h1>Create Account</h1>
-                <div className='google'>
-                    <a href='#' className='google-a-tag'> <i class="fab fa-google-plus-g"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <input type='text' placeholder='Name' />
-                <input type='email' placeholder='Email' />
-                <input type='password' placeholder='Password' />
-                <button>Sign Up</button>
-            </div>
-            <div className='above'>
-                    <h1>Welcome Back!</h1>
-                    <p>To keep connected with us please login with your personal info</p>
-                    <button id='signin-Button'>Sign In</button>
-            </div>
+    <div className="Login-page">
+      <div className="Login-container">
+        <div className="Login-form">
+          <h1>Sign in</h1>
+          <div className="google">
+            <a href="#" className="google-a-tag">
+              {" "}
+              <i class="fab fa-google-plus-g"></i>
+            </a>
+          </div>
+          <span>or use your account</span>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <button>SIGN IN</button>
         </div>
-    </div> 
-  )
+        <div className="above">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button id="signin-Button">
+            {" "}
+            <Link
+              style={{
+                textDecoration: "none",
+                color: "white",
+                fontSize: "1.5vh",
+              }}
+              to="/signup"
+            >
+              SIGN UP
+            </Link>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Login
+export default Login;
