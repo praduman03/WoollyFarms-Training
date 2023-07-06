@@ -1,5 +1,5 @@
 import React from "react";
-import "./Alert.css";
+import "./Features.css";
 import AlertImg from "../../assets/Alert image.svg";
 
 const Alert = ({ type }) => {

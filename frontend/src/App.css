@@ -61,7 +61,7 @@
 
 .LeftImg {
   position: relative;
-  bottom: -8rem;
+  bottom: -9rem;
 }
 
 .hero-text {
@@ -90,6 +90,19 @@
   justify-content: space-between;
   width: 30%;
   font-weight: 500;
+}
+
+hr {
+  width: 75vh;
+  border: 0.15rem var(--primary-bg-color) solid;
+}
+
+.left-hr {
+  margin-left: 11%;
+}
+
+.right-hr {
+  margin-left: 53%;
 }
 
 /*LOGIN PAGE AND SIGNUP PAGE CSS*/
