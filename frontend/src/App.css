@@ -230,3 +230,24 @@ hr {
   position: absolute;
   top: 40%;
 }
+
+/* Error Page */
+
+.error-container {
+  margin-top: 10vh;
+  text-align: center;
+  margin-inline: auto;
+  width: 90%;
+  color: black;
+}
+.error-container h1,
+h4 {
+  font-weight: 400;
+  padding: 2vh;
+}
+.error404 {
+  color: var(--primary-bg-color);
+  font-size: min(900%, 30vh);
+  font-weight: bolder;
+  text-align: center;
+}
