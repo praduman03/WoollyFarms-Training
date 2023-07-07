@@ -218,3 +218,15 @@ hr {
   height: 40px;
   width: 40px;
 }
+
+/* Contact us Page  */
+
+.Contactus-container {
+  /* position: absolute; */
+  display: flex;
+  /* justify-content: space-around; */
+  margin: 0 20vh 0 20vh;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+}

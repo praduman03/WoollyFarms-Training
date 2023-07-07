@@ -1,0 +1,111 @@
+/* Question Component */
+
+.Question-container {
+  color: white;
+  text-align: center;
+  margin: 0 0 20vh 0;
+}
+
+.Question-container h1 {
+  font-size: 7vh;
+  font-weight: lighter;
+  padding: 20px;
+}
+
+.Question-container p {
+  font-size: 2.5vh;
+}
+
+.Question-container > div:first-child {
+  background-color: var(--primary-bg-color);
+}
+
+.Question-container img {
+  width: 100%;
+  margin-bottom: 15vh;
+}
+
+/* Get in touch Component */
+
+.GetInTouch-container {
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+  width: 30%;
+}
+.GetInTouch-container > img:first-child {
+  width: 60vh;
+}
+
+.GetInTouch-container article {
+  font-size: 4vh;
+  margin-left: 5vh;
+}
+.GetInTouch-container hr {
+  margin: 0 70% 0 8%;
+  width: 35vh;
+}
+
+.flex {
+  display: flex;
+  margin: 2% 70% 0 8%;
+  align-items: center;
+}
+
+.GetInTouch-container p {
+  color: rgb(80, 80, 80);
+  font-size: 2vh;
+  margin-left: 1vh;
+}
+
+/* Form component */
+
+.Form-container {
+  border-radius: 9px;
+  box-shadow: 0 0 4px grey;
+  margin: 10vh 0vh 10vh 50vh;
+  width: 50vh;
+  background-color: white;
+}
+
+.Form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 95%;
+  margin-inline: auto;
+  padding: 15px;
+}
+
+.Form input {
+  background-color: #eee;
+  border: none;
+  padding: 14px;
+  font-size: 2.2vh;
+  margin: 8px 0;
+  width: 100%;
+  border-radius: 9px;
+}
+
+.Form button {
+  text-decoration: none;
+  background-color: var(--primary-bg-color);
+  color: white;
+  padding: 12px;
+  border-radius: 9px;
+  border: none;
+  font-size: 2.2vh;
+  margin: 2vh 0 2vh 0;
+}
+
+.Form textarea {
+  border: none;
+  border-radius: 9px;
+  background-color: #eee;
+  padding: 12px;
+  font-size: 2.2vh;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 17vh;
+  max-height: 17vh;
+}
