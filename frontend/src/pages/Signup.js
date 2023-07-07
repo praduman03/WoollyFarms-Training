@@ -1,22 +1,23 @@
 import React from "react";
 import "../App.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Signup() {
+  const navigate = useNavigate()
+
   return (
     <div className="Login-page">
       <div className="Login-container">
         <div className="above">
           <h1>Welcome Back!</h1>
           <p>To keep connected with us please login with your personal info</p>
-          <button id="signin-Button">
+          <button id="signin-Button" onClick={() => navigate('/login')}>
             <Link
               style={{
                 textDecoration: "none",
                 color: "white",
                 fontSize: "1.5vh",
               }}
-              to="/login"
             >
               LOG IN
             </Link>
@@ -25,7 +26,9 @@ function Signup() {
         <div className="Login-form">
           <h1>Create Account</h1>
           <div className="google">
-            <a href="#" className="google-a-tag"></a>
+            <a href="/" className="google-a-tag">
+              <i class="fab fa-google-plus-g"></i>
+              </a>
           </div>
           <span>or use your email for registration</span>
           <input type="text" placeholder="Name" />

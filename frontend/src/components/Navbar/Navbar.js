@@ -1,11 +1,16 @@
 import React from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import logo from '../../assets/LOGO.jpg'
 
 const Navbar = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="navbar">
-      <div className="nav-logo"></div>
+      <div className="nav-logo">
+        <img src={logo} alt="" />
+      </div>
 
       <div className="nav-links">
         <ul>
@@ -17,9 +22,9 @@ const Navbar = () => {
 
       <div className="nav-register content-center">
         <div className="align-center">
-          <Link>Login</Link>
+          <Link to='/login'>Login</Link>
           <span>or</span>
-          <button>Signup</button>
+          <button onClick={() => navigate('/signup')}>Signup</button>
         </div>
       </div>
     </div>
