@@ -1,0 +1,90 @@
+.Contact-content img {
+  margin: 20px 0 10px 0;
+  width: 150%;
+}
+
+section {
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-size: 2.5vh;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.Contact-area {
+  border-bottom: 2px solid white;
+}
+
+.Contact-content p {
+  font-size: 2.5vh;
+  margin: 30px 0 25px 0;
+}
+
+.hr {
+  border-top: 2px solid white;
+  margin: 0;
+  width: 50vh;
+  height: 0;
+  margin-inline: auto;
+}
+
+.Contact-content span {
+  color: white;
+  margin: 0 10px;
+}
+
+.rows {
+  margin-top: 15px;
+}
+
+.rows > ul {
+  display: inline-flex;
+}
+
+.rows li {
+  margin: 0 20px 0 20px;
+  text-decoration: underline;
+}
+
+.rows ul li a {
+  color: white;
+  display: inline-block;
+  height: 40px;
+  padding-top: 7px;
+  width: 50px;
+}
+
+.Contact-content img {
+  max-width: 210px;
+}
+
+.Footer-container section,
+footer {
+  background: var(--primary-bg-color);
+  color: white;
+}
+
+footer p {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 2vh;
+}
+
+.Coffee-button {
+  border: none;
+  width: 25vh;
+  height: 5vh;
+  border-radius: 30px;
+  color: var(--primary-bg-color);
+  font-size: 2vh;
+  font-weight: bolder;
+  margin: 20px 0 20px 0;
+}
