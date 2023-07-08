@@ -1,15 +1,17 @@
 import React from "react";
 import "../App.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate()
+
   return (
     <div className="Login-page">
       <div className="Login-container">
         <div className="Login-form">
           <h1>Sign in</h1>
           <div className="google">
-            <a href="#" className="google-a-tag">
+            <a href="/" className="google-a-tag">
               {" "}
               <i class="fab fa-google-plus-g"></i>
             </a>
@@ -22,7 +24,7 @@ function Login() {
         <div className="above">
           <h1>Hello, Friend!</h1>
           <p>Enter your personal details and start journey with us</p>
-          <button id="signin-Button">
+          <button id="signin-Button" onClick={() => navigate('/signup')}>
             {" "}
             <Link
               style={{
@@ -30,7 +32,6 @@ function Login() {
                 color: "white",
                 fontSize: "1.5vh",
               }}
-              to="/signup"
             >
               SIGN UP
             </Link>

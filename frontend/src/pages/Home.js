@@ -7,7 +7,7 @@ import RightImg from "../assets/Right Image.png";
 import { BsArrowRight } from "react-icons/bs";
 import Events from "../components/Features Part/Events";
 import Watch from "../components/Features Part/Watch";
-import Footer from "../components/Footer/Footer";
+import Footer from '../components/Footer/Footer'
 
 const Home = () => {
   return (

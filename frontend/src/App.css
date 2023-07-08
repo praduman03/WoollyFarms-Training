@@ -27,6 +27,10 @@
   align-items: center;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* Home Page */
 .hero-part {
   height: 50vh;

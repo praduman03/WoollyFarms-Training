@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Main from "./pages/Main";
 import Contactus from "./pages/Contactus";
 import Error404 from "./pages/Error404";
 
@@ -11,6 +12,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/signup" element={<Signup/>} />
+        <Route path="/main" element={<Main/>} />
         <Route path="/*" element={<Error404 />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
