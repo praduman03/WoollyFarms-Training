@@ -23,7 +23,7 @@ function Aboutus() {
         />
         <Team
           img={Prad}
-          name="Praduman Singh K"
+          name="PRADUMAN SINGH K"
           detail="Our fullstack wizard, casts his code spells with finesse. A mature mind with a funky twist, he adds groove to our team's tech symphony."
           linkedin="https://www.linkedin.com/in/praduman03/"
           github="https://github.com/praduman03"
