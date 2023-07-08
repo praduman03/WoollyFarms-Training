@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Contactus from "./pages/Contactus";
 import Error404 from "./pages/Error404";
+import Aboutus from "./pages/Aboutus";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/contactus" element={<Contactus />} />
+        <Route path="/aboutus" element={<Aboutus />} />
       </Routes>
     </BrowserRouter>
   );
