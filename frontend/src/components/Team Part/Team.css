@@ -1,0 +1,41 @@
+.Team-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: aqua; */
+  width: 50%;
+  height: 100%;
+  margin-inline: auto;
+  text-align: left;
+  color: white;
+}
+
+.Team-container {
+  /* background-color: bisque; */
+  width: 50%;
+  height: 95%;
+}
+
+.Team-img {
+  width: 40vh;
+  height: 60vh;
+}
+
+.Team-card h2 {
+  margin: 2vh 2vh 2vh 0;
+}
+
+.Team-role {
+  color: #45cfdd;
+  font-size: 2.2vh;
+  font-weight: bold;
+}
+
+.Team-social {
+  margin: 2vh 2vh 2vh 0;
+  width: 4.5vh;
+}
+
+.Team-detail {
+  font-size: 2.2vh;
+}
