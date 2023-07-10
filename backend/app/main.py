@@ -1,10 +1,17 @@
 from fastapi import FastAPI
 from .routes import user
+from .routes import contact
 from .database import engine
 from . import models
 from fastapi.middleware.cors import CORSMiddleware
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 
 app = FastAPI()
+
 
 origins = {
     "http://localhost:3000"
@@ -21,5 +28,6 @@ app.add_middleware(
 models.Base.metadata.create_all(engine)
 
 app.include_router(user.router)
+app.include_router(contact.router)
 
 

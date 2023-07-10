@@ -11,3 +11,8 @@ class ShowUser(BaseModel):
     email:str
     class Config():
         orm_mode = True
+
+class Message(BaseModel):
+    name:str
+    email:str
+    message:str
