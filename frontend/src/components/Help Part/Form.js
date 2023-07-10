@@ -17,7 +17,7 @@ function Form() {
       window.alert("invalid email");
       return;
     }
-    fetch("http://localhost:8000/contact", {
+    fetch(process.env.REACT_APP_DOMAIN + "/contact", {
       method: "post",
       headers: {
         "Content-Type": "application/json",

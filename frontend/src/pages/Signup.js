@@ -26,7 +26,7 @@ function Signup() {
       );
       return;
     }
-    fetch("http://localhost:8000/user", {
+    fetch(process.env.REACT_APP_DOMAIN + "/user", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
