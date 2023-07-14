@@ -1,10 +1,10 @@
 import React from "react";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
-import logo from '../../assets/LOGO.jpg'
+import logo from "../../assets/LOGO.jpg";
 
 const Navbar = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <div className="navbar">
@@ -14,17 +14,17 @@ const Navbar = () => {
 
       <div className="nav-links">
         <ul>
-          <Link>Home</Link>
-          <Link>Contact Us</Link>
-          <Link>About US</Link>
+          <Link to="/">Home</Link>
+          <Link to="/contactus">Contact Us</Link>
+          <Link to="/aboutus">About US</Link>
         </ul>
       </div>
 
       <div className="nav-register content-center">
         <div className="align-center">
-          <Link to='/login'>Login</Link>
+          <Link to="/login">Login</Link>
           <span>or</span>
-          <button onClick={() => navigate('/signup')}>Signup</button>
+          <button onClick={() => navigate("/signup")}>Signup</button>
         </div>
       </div>
     </div>
