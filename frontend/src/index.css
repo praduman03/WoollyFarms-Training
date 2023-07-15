@@ -1,7 +1,8 @@
 :root {
   --primary-bg-color: #5603ad;
-  --red-box: #FF0000;
-  --blue-box: #0066FF;
+  --red-box: #ff4646;
+  --blue-box: #2B80FF;
   --yellow-box: #FF9900;
   --home-chat-bg: #714C99;
+  --purple-shadow: #653E8F80;
 }

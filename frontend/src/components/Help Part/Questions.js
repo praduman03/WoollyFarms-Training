@@ -14,7 +14,7 @@ function Questions() {
         </p>
       </div>
       <div>
-        <img src={Waves} />
+        <img src={Waves} alt="" />
       </div>
     </div>
   );
