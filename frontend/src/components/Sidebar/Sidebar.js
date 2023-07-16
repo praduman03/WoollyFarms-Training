@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/LOGO.jpg";
 import "./Sidebar.css";
 import { BsMegaphoneFill } from "react-icons/bs";
@@ -12,6 +13,36 @@ const Sidebar = () => {
   const [event, setEvent] = useState(false);
   const [group, setGroup] = useState(false);
 
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (alert) {
+      navigate("/main", {
+        state: {
+          type: "alert",
+        },
+      });
+    } else if (event) {
+      navigate("/main", {
+        state: {
+          type: "event",
+        },
+      });
+    } else if (group) {
+      navigate("/main", {
+        state: {
+          type: "group",
+        },
+      });
+    } else {
+      navigate("/main", {
+        state: {
+          type: "neutral",
+        },
+      });
+    }
+  }, [alert, event, group, navigate]);
+
   return (
     <div className="sidebar">
       <img src={Logo} alt="" className="side-logo" />
@@ -24,7 +55,7 @@ const Sidebar = () => {
               setEvent(false);
               setGroup(false);
             }}
-            className={alert ? 'alert' : 'side-links'}
+            className={alert ? "alert" : "side-links"}
           >
             <BsMegaphoneFill /> Beware Neighbors
           </li>
@@ -34,7 +65,7 @@ const Sidebar = () => {
               setEvent(!event);
               setGroup(false);
             }}
-            className={event ? 'event' : 'side-links'}
+            className={event ? "event" : "side-links"}
           >
             <AiFillCalendar /> Welcome Neighbors
           </li>
@@ -44,7 +75,7 @@ const Sidebar = () => {
               setEvent(false);
               setGroup(!group);
             }}
-            className={group ? 'group' : 'side-links'}
+            className={group ? "group" : "side-links"}
           >
             <AiFillEye /> Watch Neighbors
           </li>
@@ -64,3 +95,7 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+// const type = alertBool ? 'alert' : eventBool ? 'event' : groupBool ? 'group' : ''
+
+// export {type}

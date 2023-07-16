@@ -1,0 +1,14 @@
+.chat-section {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+}
+
+.chat-section img {
+    width: 100%;
+    position: absolute;
+    top: -20vh;
+    left: 0;
+    mix-blend-mode: luminosity;
+    z-index: -1;
+}
