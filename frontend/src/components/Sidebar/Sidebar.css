@@ -30,7 +30,7 @@
   width: 100%;
 }
 
-.side-links, .alert, .event, .group {
+.side-links, .alert-active, .event-active, .group-active {
   display: flex;
   align-items: center;
   width: 70%;
@@ -43,21 +43,21 @@
     scale: 1.05;
 }
 
-.alert {
+.alert-active {
   background-color: var(--red-box);
   border-radius: 10px;
   box-shadow: 4px 4px 6px var(--purple-shadow), -4px -4px #00000033,
     inset -4px -4px 4px #ff000080, inset 4px 4px 6px #0000004d;
 }
 
-.event {
+.event-active {
   background-color: var(--blue-box);
   border-radius: 10px;
   box-shadow: 4px 4px 6px var(--purple-shadow), -4px -4px #00000033,
     inset -4px -4px 4px #0066ff80, inset 4px 4px 6px #0000004d;
 }
 
-.group {
+.group-active {
   background-color: var(--yellow-box);
   border-radius: 10px;
   box-shadow: 4px 4px 6px var(--purple-shadow), -4px -4px #00000033,
@@ -91,9 +91,9 @@
 
 .profile svg,
 .side-links svg,
-.alert svg,
-.event svg,
-.group svg,
+.alert-active svg,
+.event-active svg,
+.group-active svg,
 .logout svg {
   scale: 1.3;
   margin-right: 2vh;
