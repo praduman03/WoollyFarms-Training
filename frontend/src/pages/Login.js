@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../App.css";
 import { Link, useNavigate } from "react-router-dom";
+import { UserContext } from "../App";
 
 function Login() {
   const navigate = useNavigate();
+  const { state, dispatch } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -38,6 +40,7 @@ function Login() {
         console.log(data);
         sessionStorage.setItem("jwt", data.aceess_token);
         sessionStorage.setItem("user", JSON.stringify(data.user));
+        dispatch({ type: "USER", payload: data.user });
         window.alert("welcome " + data.user.name);
         navigate("/");
       })
@@ -69,6 +72,7 @@ function Login() {
             type="password"
             placeholder="Password"
             value={password}
+            id="showpassword"
             onChange={(e) => setPassword(e.target.value)}
           />
           <button onClick={Login}>SIGN IN</button>

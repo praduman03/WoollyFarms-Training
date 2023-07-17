@@ -28,3 +28,10 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     email: Optional[str] = None
+
+
+class Group(BaseModel):
+    name: str
+    description: str
+    class Config:
+        from_attributes = True
