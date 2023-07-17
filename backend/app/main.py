@@ -1,7 +1,5 @@
 from fastapi import FastAPI
-from .routes import user
-from .routes import contact
-from .routes import auth
+from .routes import user, contact, auth, group
 from .database import engine
 from . import models
 from fastapi.middleware.cors import CORSMiddleware
@@ -30,6 +28,7 @@ models.Base.metadata.create_all(engine)
 
 app.include_router(auth.router)
 app.include_router(user.router)
+app.include_router(group.router)
 app.include_router(contact.router)
 
 
