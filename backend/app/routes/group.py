@@ -17,7 +17,7 @@ def all(db: Session=Depends(get_db)):
 
 @router.post("/", status_code = status.HTTP_201_CREATED)
 def create_group(request: schemas.Group, db: Session = Depends(get_db)):
-    new_group = models.Group(title=request.title, body=request.body, user_id=1)
+    new_group = models.Group(title=request.title, body=request.body,type=request.type, user_id=request.user_id)
     db.add(new_group)
     db.commit()
     db.refresh(new_group)

@@ -9,8 +9,10 @@ class User(BaseModel):
 
 
 class Group(BaseModel):
+    type:str
     title: str
     body: str
+    user_id: int
     class Config():
         from_attributes = True
 
@@ -21,7 +23,8 @@ class ShowUser(BaseModel):
     class Config():
         from_attributes = True
 
-class ShowGroup(Group): 
+class ShowGroup(Group):
+    type:str 
     title:str
     body:str
     creator: ShowUser
