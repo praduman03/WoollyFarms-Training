@@ -55,7 +55,7 @@ const Sidebar = () => {
               setEvent(false);
               setGroup(false);
             }}
-            className={alert ? "alert" : "side-links"}
+            className={alert ? "alert-active" : "side-links"}
           >
             <BsMegaphoneFill /> Beware Neighbors
           </li>
@@ -65,7 +65,7 @@ const Sidebar = () => {
               setEvent(!event);
               setGroup(false);
             }}
-            className={event ? "event" : "side-links"}
+            className={event ? "event-active" : "side-links"}
           >
             <AiFillCalendar /> Welcome Neighbors
           </li>
@@ -75,7 +75,7 @@ const Sidebar = () => {
               setEvent(false);
               setGroup(!group);
             }}
-            className={group ? "group" : "side-links"}
+            className={group ? "group-active" : "side-links"}
           >
             <AiFillEye /> Watch Neighbors
           </li>
