@@ -43,7 +43,6 @@ function Login() {
         sessionStorage.setItem("jwt", data.aceess_token);
         sessionStorage.setItem("user", JSON.stringify(data.user));
         dispatch({ type: "USER", payload: data.user });
-        // window.alert("welcome " + data.user.name);
         toast.success("Successfully Logged In, " + data.user.name);
 
         navigate("/");
