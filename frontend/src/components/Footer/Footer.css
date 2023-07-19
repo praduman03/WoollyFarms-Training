@@ -16,6 +16,7 @@ section {
 ul {
   margin: 0;
   padding: 0;
+  gap: 2vh;
   list-style: none;
 }
 
