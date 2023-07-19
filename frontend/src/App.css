@@ -313,3 +313,8 @@ h4 {
   font-size: 2vh;
   text-align: left;
 }
+
+/* MAIN PAGE */
+.main-page {
+  display: flex;
+}
