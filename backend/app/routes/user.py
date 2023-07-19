@@ -27,6 +27,6 @@ def create_user(request:schemas.User, db: Session = Depends(get_db)):
 #     return {"message":"get user by id"}
 
 @router.get('/', response_model=List[schemas.ShowUser])
-def getUser(db: Session= Depends(get_db), current_user:schemas.User = Depends(oauth2.get_current_user)):
+def getUser(db: Session= Depends(get_db)):
     data = db.query(models.User).all()
     return data
