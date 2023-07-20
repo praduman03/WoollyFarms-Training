@@ -12,16 +12,14 @@ load_dotenv()
 app = FastAPI()
 
 
-origins = {
-    "http://localhost:3000"
-}
+origins = {"*"}
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"]
+    allow_headers=["*"],
 )
 
 models.Base.metadata.create_all(engine)
@@ -30,5 +28,3 @@ app.include_router(auth.router)
 app.include_router(user.router)
 app.include_router(group.router)
 app.include_router(contact.router)
-
-
