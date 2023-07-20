@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../App.css";
 import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Signup() {
   const navigate = useNavigate();
@@ -13,15 +15,15 @@ function Signup() {
 
   const PostData = () => {
     if (!email || !password || !name) {
-      window.alert("please fill all the required details");
+      toast.error("please fill all the required details");
       return;
     }
     if (!emailREGEX.test(email)) {
-      window.alert("invalid email");
+      toast.error("invalid email");
       return;
     }
     if (!passwordREGEX.test(password)) {
-      window.alert(
+      toast.error(
         "password should not be less than 6 characters and must contain atleast one number, one uppercase, one lowercase"
       );
       return;
@@ -41,9 +43,9 @@ function Signup() {
       .then((data) => {
         if (data.error) {
           console.log(data.error);
-          window.alert(data.error);
+          toast.error(data.error);
         } else {
-          window.alert(data);
+          toast.error(data);
           navigate("/login");
         }
       })
@@ -53,50 +55,55 @@ function Signup() {
   };
 
   return (
-    <div className="Login-page">
-      <div className="Login-container">
-        <div className="above">
-          <h1>Welcome Back!</h1>
-          <p>To keep connected with us please login with your personal info</p>
-          <button id="signin-Button" onClick={() => navigate("/login")}>
-            <Link
-              style={{
-                textDecoration: "none",
-                color: "white",
-                fontSize: "1.5vh",
-              }}
-            >
-              LOG IN
-            </Link>
-          </button>
-        </div>
-        <div className="Login-form">
-          <h1>Create Account</h1>
-          <div className="google">
-            <a href="/" className="google-a-tag">
-              <i className="fab fa-google-plus-g"></i>
-            </a>
+    <div>
+      <ToastContainer />
+      <div className="Login-page">
+        <div className="Login-container">
+          <div className="above">
+            <h1>Welcome Back!</h1>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button id="signin-Button" onClick={() => navigate("/login")}>
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "white",
+                  fontSize: "1.5vh",
+                }}
+              >
+                LOG IN
+              </Link>
+            </button>
           </div>
-          <span>or use your email for registration</span>
-          <input
-            type="text"
-            placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button onClick={PostData}>Sign Up</button>
+          <div className="Login-form">
+            <h1>Create Account</h1>
+            <div className="google">
+              <a href="/" className="google-a-tag">
+                <i className="fab fa-google-plus-g"></i>
+              </a>
+            </div>
+            <span>or use your email for registration</span>
+            <input
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button onClick={PostData}>Sign Up</button>
+          </div>
         </div>
       </div>
     </div>
