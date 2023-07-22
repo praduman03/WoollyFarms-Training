@@ -10,7 +10,7 @@ const Main = () => {
   return (
     <div className='main-page'>
       <Sidebar />
-      {location.state.type === 'alert' ? <ChatSection type='Alerts' /> : location.state.type === 'event' ? <ChatSection type='Events' /> : location.state.type === 'group' ? <ChatSection type='Group' /> : <ChatSection type='neutral' />}
+      {location.state ? <ChatSection type = {location.state.type === 'alert' ? 'Alerts' : location.state.type === 'event' ? 'Events' : location.state.type === 'group' ? 'Group' : 'neutral' } /> : <div>loading</div>}
     </div>
   )
 }
