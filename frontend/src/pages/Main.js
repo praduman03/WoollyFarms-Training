@@ -5,8 +5,6 @@ import ChatSection from '../components/Main Component/ChatSection'
 
 const Main = () => {
   const location = useLocation()
-
-  console.log(location.state)
   return (
     <div className='main-page'>
       <Sidebar />

@@ -36,22 +36,29 @@
     overflow: auto;
     display: flex;
     /* flex-direction: column; */
-    gap: 2vh;
     flex-wrap: wrap-reverse;
+    justify-content: flex-start;
+    gap: 2vh;
 }
 
-.chat-container>div {
+.chat {
     width: 100%;
     height: fit-content;
     padding: 10px 0;
 }
 
 .text {
+    margin-top: 1vh;
     overflow-wrap:inherit;
     padding: 10px 20px;
     border-radius: 20px;
     max-width: 70%;
     letter-spacing: 1px;
+}
+
+.no-msg {
+    font-size: 1.5em;
+    text-align: center;
 }
 
 .input-container {

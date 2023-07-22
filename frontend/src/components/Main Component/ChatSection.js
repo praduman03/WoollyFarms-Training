@@ -2,23 +2,29 @@ import React, { useEffect, useState } from "react";
 import "./ChatSection.css";
 import ChatBg from "../../assets/Chat_background.png";
 import { AiOutlineSend } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 const ChatSection = ({ type }) => {
   const [body, setBody] = useState("");
-  const [alert, setAlert] = useState("");
-  const [event, setEvent] = useState("");
-  const [group, setGroup] = useState("");
-  const [error, setError] = useState("");
-
-  const navigate = useNavigate();
-
-  // console.log(JSON.parse(userName).name);
+  const [alert, setAlert] = useState([]);
+  const [event, setEvent] = useState([]);
+  const [group, setGroup] = useState([]);
 
   const User = sessionStorage.getItem("user");
 
   const userName = JSON.parse(User).name;
   const userId = JSON.parse(User).id;
+
+  const fetchChat = () => {
+    fetch(process.env.REACT_APP_DOMAIN + "/group")
+    .then((res) => res.json())
+    .then((json) => {
+      setAlert(json.filter((e) => e.type === "Alerts"));
+      setEvent(json.filter((e) => e.type === "Events"));
+      setGroup(json.filter((e) => e.type === "Group"));
+    })
+    .catch((err) => console.log(err));
+  };
 
   const postChat = () => {
     fetch(process.env.REACT_APP_DOMAIN + "/group", {
@@ -36,41 +42,25 @@ const ChatSection = ({ type }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.error) {
-          console.log(data.error);
-          window.alert(data.error);
+          toast.error(data.error)
         } else {
-          navigate("/main");
+          toast.success("Chat sent successfully")
+          fetchChat()
+          setBody("")
         }
       })
       .catch((error) => {
         console.log(error);
       });
   };
-
+  
   useEffect(() => {
-    const fetchChat = async () => {
-      const response = await fetch(process.env.REACT_APP_DOMAIN + "/group");
-      const json = await response.json();
-      if (response.ok) {
-        // if (type === "Alerts") {
-        //   setAlert(json.body);
-        // } else if (type === "Events") {
-        //   setEvent(json.body);
-        // } else if (type === "Group") {
-        //   setGroup(json.body);
-        // }
-        console.log(json);
-      } else {
-        setError(json.error);
-      }
-    };
-
     fetchChat();
   }, [type]);
 
-  console.log(alert);
   return (
     <div className="chat-section">
+      <ToastContainer />
       <img src={ChatBg} alt="" />
 
       <div className="my-msg-container">
@@ -90,23 +80,20 @@ const ChatSection = ({ type }) => {
       </div>
 
       <div className="chat-container">
-        <div>
-          <div
-            className={`text ${
-              type === "Alerts"
-                ? "alert"
-                : type === "Events"
-                ? "event"
-                : type === "Group"
-                ? "group"
-                : "neutral"
-            }`}
-          >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
-            repellat veniam alias fugit consequuntur ea beatae voluptas, et odit
-            iure totam minima molestias nulla veritatis deserunt in fugiat.
-            Officia, magni.
-          </div>
+        <div className="chat">
+          {type === "Alerts" && alert.length > 0
+            ? alert.map((e) => {
+                return <div className="text alert">{e.body}</div>;
+              })
+            : type === "Events" && event.length > 0
+            ? event.map((e) => {
+                return <div className="text event">{e.body}</div>;
+              })
+            : type === "Group" && group.length > 0
+            ? group.map((e) => {
+                return <div className="text group">{e.body}</div>;
+              })
+            : <div className="no-msg">You have no messages</div>}
         </div>
       </div>
 
@@ -115,6 +102,7 @@ const ChatSection = ({ type }) => {
           type="text"
           placeholder="Enter text"
           onChange={(e) => setBody(e.target.value)}
+          value={body}
         />
         <AiOutlineSend onClick={postChat} />
       </div>
