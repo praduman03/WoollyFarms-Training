@@ -19,4 +19,4 @@ def login(request: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(
     access_token = token.create_access_token(
         data = {"sub":user.email}
     )
-    return {"aceess_token": access_token, "token_type": "bearer", "user":{"email":user.email,"name":user.name}}
+    return {"aceess_token": access_token, "token_type": "bearer", "user":{"email":user.email,"name":user.name,"id":user.id}}
