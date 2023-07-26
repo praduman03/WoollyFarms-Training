@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Logo from "../../assets/LOGO.jpg";
 import "./Sidebar.css";
 import { BsMegaphoneFill } from "react-icons/bs";
@@ -45,8 +45,9 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      <img src={Logo} alt="" className="side-logo" />
-
+      <Link to="/">
+        <img src={Logo} alt="" className="side-logo" />
+      </Link>
       <div className="nav-container">
         <ul>
           <li

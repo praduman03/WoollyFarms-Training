@@ -42,10 +42,11 @@ function Login() {
         console.log(data);
         sessionStorage.setItem("jwt", data.aceess_token);
         sessionStorage.setItem("user", JSON.stringify(data.user));
-        dispatch({ type: "USER", payload: data.user });
+        dispatch({ type: "USER", payload: JSON.stringify(data.user) });
         toast.success("Successfully Logged In, " + data.user.name);
-
-        navigate("/");
+        setTimeout(() => {
+          navigate("/");
+        }, 3000);
       })
       .catch((error) => {
         console.log(error);

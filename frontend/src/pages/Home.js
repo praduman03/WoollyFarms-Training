@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../App";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Alert from "../components/Features Part/Alert";
 import HeroBg from "../assets/Hero-bg.png";
@@ -7,7 +9,7 @@ import RightImg from "../assets/Right Image.png";
 import { BsArrowRight } from "react-icons/bs";
 import Events from "../components/Features Part/Events";
 import Watch from "../components/Features Part/Watch";
-import Footer from '../components/Footer/Footer'
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   return (
