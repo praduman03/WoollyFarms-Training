@@ -45,7 +45,7 @@ function Login() {
         dispatch({ type: "USER", payload: JSON.stringify(data.user) });
         toast.success("Successfully Logged In, " + data.user.name);
         setTimeout(() => {
-          navigate("/");
+          navigate("/main");
         }, 3000);
       })
       .catch((error) => {

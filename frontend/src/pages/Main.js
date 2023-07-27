@@ -1,21 +1,19 @@
-import React, { useEffect, useContext } from "react";
-import { UserContext } from "../App";
+import React from "react";
+// import { UserContext } from "../App";
 import Sidebar from "../components/Sidebar/Sidebar";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import ChatSection from "../components/Main Component/ChatSection";
 
 const Main = () => {
   const location = useLocation();
-  const navigate = useNavigate();
-  const { state, dispatch } = useContext(UserContext);
+  // const navigate = useNavigate();
+  // const { state, dispatch } = useContext(UserContext);
 
-  useEffect(() => {
-    if (!state.user) {
-      navigate("/signup");
-    } else {
-      console.log("user is loggin in");
-    }
-  }, [state, navigate]);
+  // if (!state.user) {
+  //   navigate("/signup");
+  // } else {
+  //   console.log("user is loggin in");
+  // }
 
   return (
     <div className="main-page">
