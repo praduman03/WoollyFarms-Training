@@ -45,8 +45,10 @@ function Signup() {
           console.log(data.error);
           toast.error(data.error);
         } else {
-          toast.error(data);
-          navigate("/login");
+          toast.success("successfully created your account");
+          setTimeout(() => {
+            navigate("/login");
+          }, 3000);
         }
       })
       .catch((error) => {

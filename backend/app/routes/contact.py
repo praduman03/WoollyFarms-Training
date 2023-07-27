@@ -43,7 +43,7 @@ def send_mail(name:str, email:str, message:str):
 
 
 @router.post("/contact")
-def schedule_mail(request:schemas.Message, current_user:schemas.User = Depends(oauth2.get_current_user)):
+def schedule_mail(request:schemas.Message):
 
     send_mail(request.name, request.email, request.message)
     return {"status": 200, "message":"email has been scheduled"}
