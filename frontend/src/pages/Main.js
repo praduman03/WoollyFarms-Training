@@ -10,7 +10,7 @@ const Main = () => {
   const { state, dispatch } = useContext(UserContext);
 
   useEffect(() => {
-    if (!state || !state.user) {
+    if (!state.user) {
       navigate("/signup");
     } else {
       console.log("user is loggin in");
